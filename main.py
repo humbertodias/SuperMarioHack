@@ -1,9 +1,9 @@
+import sys, threading
 from hack import *
 from time import *
-processo = "zsnesw.exe"
 
+processo = "zsnes" if sys.platform == 'linux' else "zsnesw.exe"
 hackMario = hack(processo)
-
 
 while True:
     hackMario.fixarStatusPenaMario()
